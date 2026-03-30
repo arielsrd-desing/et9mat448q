@@ -1,0 +1,227 @@
+/* Estilo vintage tipo consola / Unix / terminal */
+
+:root {
+--bg-dark: #0d0f0f;
+--bg-panel: #111414;
+--green-neon: #00ff88;
+--green-dim: #0aff6c;
+--text-light: #d4ffd9;
+--border-glow: 0 0 8px rgba(0, 255, 136, 0.6);
+}
+
+
+body {
+margin: 0;
+font-family: "Courier New", Courier, monospace;
+background-color: var(--bg-dark);
+color: var(--text-light);
+padding-bottom: 50px;
+}
+/* HEADER PEGADO */
+.header-sticky {
+position: sticky;
+top: 0;
+z-index: 10;
+background: var(--bg-dark);
+padding: 20px;
+border-bottom: 2px solid var(--green-neon);
+box-shadow: var(--border-glow);
+}
+
+header {
+  position: relative;
+}
+
+/* Logo */
+.school-logo {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 80px;      /* Ajusta según el tamaño real del logo */
+  height: auto;
+  filter: drop-shadow(0 0 4px #00ff99);
+  opacity: 0.9;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.school-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.main-title {
+margin: 0;
+font-size: 42px;
+color: var(--green-neon);
+text-shadow: 0 0 5px var(--green-neon);
+}
+
+
+.main-desc {
+margin: 5px 0 0;
+color: var(--green-dim);
+}
+
+
+/* BLOQUES */
+.bloque {
+background: var(--bg-panel);
+margin: 25px;
+padding: 20px;
+border: 2px solid var(--green-neon);
+border-radius: 6px;
+box-shadow: var(--border-glow);
+transition: transform 0.15s ease-in-out;
+}
+
+
+.bloque:hover {
+transform: scale(1.01);
+}
+
+
+.bloque h2 {
+margin-top: 0;
+color: var(--green-dim);
+text-shadow: 0 0 4px var(--green-neon);
+}
+
+
+/* CONTENIDO DE CADA BLOQUE */
+.contenido {
+padding-left: 10px;
+border-left: 2px dashed var(--green-dim);
+}
+
+
+/* LINKS TIPO TERMINAL */
+a {
+color: var(--green-neon);
+text-decoration: none;
+}
+
+
+a:hover {
+text-decoration: underline;
+}
+
+
+/* ANIMACIÓN SUAVE DE PARPADEO (ESTILO CURSOR) */
+@keyframes blink {
+0%, 50% { opacity: 1; }
+50.1%, 100% { opacity: 0.4; }
+}
+
+
+.cursor {
+animation: blink 1s infinite;
+}
+
+
+.main-nav {
+  margin-top: 15px;
+  border-top: 2px solid #00ff99;
+  border-bottom: 2px solid #00ff99;
+  padding: 10px 0;
+  background: #0a0f0a;
+  box-shadow: 0 0 8px #00ff99;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #00ff99;
+  font-family: "Courier New", monospace;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.main-nav a:hover {
+  background: rgba(0, 255, 153, 0.15);
+  box-shadow: 0 0 6px #00ff99;
+}
+
+
+.grade-block {
+  margin-bottom: 30px;
+  padding: 10px;
+  border: 2px solid #00ff99;
+  border-radius: 10px;
+  background: #0a0f0a;
+  box-shadow: 0 0 6px #00ff99;
+}
+
+.grade-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Courier New", monospace;
+  color: #00ff99;
+}
+
+.grade-table th,
+.grade-table td {
+  border: 1px solid #00ff99;
+  padding: 8px;
+  text-align: left;
+}
+
+.grade-table th {
+  background: rgba(0, 255, 153, 0.15);
+}
+
+.grade-table tr:hover {
+  background: rgba(0, 255, 153, 0.1);
+}
+
+
+.bloque {
+  scroll-margin-top: 190px; /* Ajustá según necesites */
+}
+
+
+
+.crt {
+  background: #000;
+  color: #0aff0a;
+  font-family: "Courier New", monospace;
+  text-shadow: 0 0 5px #0aff0a;
+
+  /* Scanlines */
+  position: relative;
+  overflow: hidden;
+}
+
+.crt::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.05) 0px,
+    rgba(255, 255, 255, 0.05) 2px,
+    transparent 3px,
+    transparent 6px
+  );
+  mix-blend-mode: overlay;
+}
+
+.crt-flicker {
+  animation: crtFlicker 0.15s infinite;
+}
+
+@keyframes crtFlicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.97; }
+  100% { opacity: 1; }
+}
