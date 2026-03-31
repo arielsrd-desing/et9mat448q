@@ -109,18 +109,27 @@ const calificaciones = {
     { nombre: "GOMEZ Victoria Jazmin", nota: 0, obs: "..." },
     { nombre: "GONZALEZ TARCIA Franco Gabriel", nota: 0, obs: "..." },
     { nombre: "LATELLA Lisandro", nota: 0, obs: "..." },
+	{ nombre: "LOPEZ Camila Keila", nota: 0, obs: "..." },
+	{ nombre: "MAMANI RELOS Tupac Misael", nota: 0, obs: "..." },
+	{ nombre: "MORINIGO COTRINA Lucero Belen", nota: 0, obs: "..." },
+	{ nombre: "PADILLA SOTO Andres Alejandro", nota: 0, obs: "..." },
+	{ nombre: "RABINOWICZ Tiziano Nicolas", nota: 0, obs: "..." },
+	{ nombre: "REYES FLORES Zoe Mora", nota: 0, obs: "..." },
+	{ nombre: "SALVA BAVIO Matias", nota: 0, obs: "..." },
+	{ nombre: "SANCHEZ PEÑARANDA Abigail Luz", nota: 0, obs: "..." },
+	{ nombre: "SANTA CRUZ Bautista Sebastian", nota: 0, obs: "..." },
+	{ nombre: "SORIA Leroy Máximo", nota: 0, obs: "..." }
   ],
   segundo: [
-    { nombre: "Ana Ríos", nota: 9, obs: "Muy bien" },
-    { nombre: "Luis Soto", nota: 7, obs: "Regular" }
+    { nombre: "--", nota: 0, obs: "..." }
   ],
   tercer: [
-    { nombre: "Sofía Martínez", nota: 10, obs: "Excelente" }
+    { nombre: "--", nota: 0, obs: "..." }
   ],
   cuarto: [
-    { nombre: "Pedro López", nota: 5, obs: "Debe reforzar contenidos" }
+    { nombre: "--", nota: 0, obs: "..." }
   ],
   recuperacion: [
-    { nombre: "Valentina Ruiz", nota: 8, obs: "Recuperó satisfactoriamente" }
+    { nombre: "--", nota: 0, obs: "..." }
   ]
 };
